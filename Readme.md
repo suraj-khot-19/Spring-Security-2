@@ -23,7 +23,7 @@ spring.jpa.show-sql=true
 
 ---
 
-### 2. SQL Database With Tables
+## 2. SQL Database With Tables
 
 ```
 create database spring_secutity;
@@ -49,7 +49,7 @@ select * from authorities;
 
 ---
 
-### 3. Security Configuration
+## 3. Security Configuration
 
 ```java
 @Configuration
@@ -98,7 +98,7 @@ public class SecurityConfig {
 
 ---
 
-### 4. Controller Layer
+## 4. Controller Layer
 
 ```java
 @RestController
@@ -128,15 +128,31 @@ public class GreetController {
 
 ---
 
-### 5. Output
+## 5. Output
+# Output Screenshots
 
-1. admin ![img](outputs/p1.png)
-2. admin but user details ![img](outputs/p2.png)
-3. user ![img](outputs/p3.png)
-4. user but admin details ![img](outputs/p4.png)
-5. home with user details ![img](outputs/p5.png)
-6. home with user details ![img](outputs/p6.png)
-7. Sql user table ![img](outputs/p7.png)
-8. Sql authorities ![img](outputs/p8.png)
+### 1. Admin
+![Admin](outputs/p1.png)
+
+### 2. Admin but user details
+![Admin but user details](outputs/p2.png)
+
+### 3. User
+![User](outputs/p3.png)
+
+### 4. User but admin details
+![User but admin details](outputs/p4.png)
+
+### 5. Home with user details
+![Home with user details](outputs/p5.png)
+
+### 6. Home with user details (Alternate)
+![Home with user details](outputs/p6.png)
+
+### 7. SQL User Table
+![SQL User Table](outputs/p7.png)
+
+### 8. SQL Authorities
+![SQL Authorities](outputs/p8.png)
 
 ---
