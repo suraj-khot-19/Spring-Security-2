@@ -1,4 +1,4 @@
-package controller;
+package com.sprint_security.Spring_Security_2.controller;
 
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,7 +21,7 @@ public class GreetController {
     }
 
     //only for admin
-    @PreAuthorize("hashRole('ADMIN')")
+    @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/admin")
     public String helloAdmin() {
         return "Hello, Admin!";
