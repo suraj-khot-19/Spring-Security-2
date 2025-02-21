@@ -6,7 +6,8 @@
 2. [SQL Database With Tables](#2-sql-database-with-tables)
 3. [Security Configuration](#3-security-configuration)
 4. [Controller Layer](#4-controller-layer)
-5. [Outputs](#5-output)
+5. [Password Encoders](#5-password-encoders)
+6. [Outputs](#6-output)
 
 ### 1. Application Properties
 
@@ -127,9 +128,30 @@ public class GreetController {
 ```
 
 ---
+## 5. Password Encoders
+1. DelegatingPasswordEncoder
+```java
+//password encoder
+PasswordEncoder encoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
+```
+```text
+{bcrypt}$2a$10$7EqJtq98hPqEX7fNZaFWoO.tTVXjbl0.jG/7dyogcrwYPCe5.tn2a
+```
 
-## 5. Output
-# Output Screenshots
+2. BCryptPasswordEncoder
+```java
+ /// bcrypt password encoder
+@Bean
+public PasswordEncoder passwordEncoder() {
+    return new BCryptPasswordEncoder();
+}
+```
+```text
+$2a$10$7EqJtq98hPqEX7fNZaFWoO.tTVXjbl0.jG/7dyogcrwYPCe5.tn2a
+```
+---
+## 6. Output
+### Output Screenshots
 
 ### 1. Admin
 ![Admin](outputs/p1.png)
